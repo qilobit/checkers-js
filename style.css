@@ -1,0 +1,48 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+.board{
+    margin: 0 auto;
+    width: 427px;
+    height: 400px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: solid 0.1em #000;
+}
+.black{
+    background-color: #001;
+}
+.white{
+    background-color: #FFF;
+}
+.base-circle{
+    margin-top: 4px;
+    border-radius: 50%;
+    border: solid 1px #000;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.black-chip{
+    background-color:rgb(59, 58, 58);
+}
+.red-chip{
+    background-color: #F00;
+}
+.preview-chip{
+    border: solid 1px #FFF;
+    background-color: rgb(8, 211, 25);
+}  
