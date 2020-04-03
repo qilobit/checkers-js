@@ -3,21 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damas</title>
+    <title>Checkers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <div class="container">
-        <h2>Damas</h2>
-        <div class="board">
-
+        <h2>Play Checkers</h2>
+        <div class="game-area">
+            <div class="red-team score-container">
+                <span>Red</span>
+                <table>
+                    <tr>
+                        <td><b>Movs:</b></td>
+                        <td id="red-team-movs-total">0</td>
+                    </tr>
+                    <tr>
+                        <td><b>Score:</b></td>
+                        <td id="red-team-score">0</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="board">
+    
+            </div>
+            <div class="black-team score-container">
+                <span>Black</span>
+                <table>
+                    <tr>
+                        <td><b>Movs:</b></td>
+                        <td id="black-team-movs-total">0</td>
+                    </tr>
+                    <tr>
+                        <td><b>Score:</b></td>
+                        <td id="black-team-score">0</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-
-        <div class="buttons">
-
-        </div>
-
     </div>
 
     <script src="app.js"></script>

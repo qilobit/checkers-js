@@ -1,39 +1,24 @@
 //  Made by qilobit
 //  Checkers game
 
+//  Constants
 const container = document.querySelector('.container');
 const board = document.querySelector('.board');
 const buttons = document.querySelector('.buttons');
-// These are the initial positions for the chips
-const initialSetup = [
-    'b_1_1',
-    'b_1_3',
-    'b_1_5',
-    'b_1_7',
-    'b_2_2',
-    'b_2_4',
-    'b_2_6',
-    'b_2_8',
-    'b_3_1',
-    'b_3_3',
-    'b_3_5',
-    'b_3_7',
-    'b_6_1',
-    'b_6_3',
-    'b_6_5',
-    'b_6_7',
-    'b_8_1',
-    'b_8_3',
-    'b_8_5',
-    'b_8_7',
-    'b_7_2',
-    'b_7_4',
-    'b_7_6',
-    'b_7_8',
-];
+const UIRedTeamTotalMovs = document.querySelector('#red-team-movs-total');
+const UIBlackTeamTotalMovs = document.querySelector('#black-team-movs-total');
 const BLACK_CHIP = 'black';
 const RED_CHIP = 'red';
+
+// Vars
+let blackTeamTotalMovs = 0;
+let redTeamTotalMovs = 0;
+
+//Events
 document.addEventListener('DOMContentLoaded', buildBoard);
+
+
+//  Funtions
 function buildBoard(){
     const cols = 8;
     const rows = 8;
@@ -127,6 +112,7 @@ function moveToPreviewPosition(){
     let sourceCopy = copyNode(source);
     target.appendChild(sourceCopy);
     source.parentElement.removeChild(source);
+    updateMovsTotal(source);
     clearAllPreviews();
 }
 function copyNode(node){
@@ -144,4 +130,15 @@ function getPositionFromId(id){
 function clearAllPreviews(){
     Array.from(document.querySelectorAll(`.preview-chip`))
     .forEach(node => node.parentElement.removeChild(node));
+}
+function updateMovsTotal(source){
+    console.log(source);
+    if(source.dataset.team == RED_CHIP){
+        redTeamTotalMovs++;
+        UIRedTeamTotalMovs.innerHTML = redTeamTotalMovs;
+    }else{
+        blackTeamTotalMovs++;
+        UIBlackTeamTotalMovs.innerHTML = blackTeamTotalMovs;
+    }
+
 }
