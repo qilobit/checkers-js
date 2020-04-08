@@ -97,7 +97,7 @@ function createMiniChip(sourceId, teamColor, chipToEat){
     div.dataset.original_chip = sourceId;
     div.title = 'Move here'
     div.addEventListener('click', () => {
-        moveAfterEat(this, chipToEat);
+        moveAfterEat(div, chipToEat);
     });
     return div;  
 }
@@ -148,11 +148,10 @@ function previewAvailablePositions(){
     }
 }
 function moveAfterEat(element, chipToEat){
-    l('moveAfterEat ', element, chipToEat);
     if(chipToEat.dataset.team == BLACK_CHIP){
-        increaseBlackTeamScore();
+        increaseRedTeamScore();
     }else{
-
+        increaseBlackTeamScore();
     }
     chipToEat.parentElement.removeChild(chipToEat);
 
