@@ -25,6 +25,9 @@
 .black{
     background-color: #001;
 }
+.red{
+    background-color: #F00;
+}
 .white{
     background-color: #FFF;
 }
@@ -35,6 +38,14 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+.mini-circle{
+    margin-top: 20px;
+    border-radius: 50%;
+    border: solid 1px #FFF;
+    width: 10px;
+    height: 10px;
+    cursor: pointer; 
 }
 .black-chip{
     background-color:rgb(59, 58, 58);
@@ -71,4 +82,20 @@
     display: flex;
     align-content: center;
     justify-content: space-evenly;
+}
+.eatable{
+    animation: blink 1s linear infinite;
+}
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+.link{
+    text-align: center;
+}
+.link a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
 }
