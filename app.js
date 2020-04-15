@@ -136,8 +136,9 @@ function previewAvailablePositions(){
             const stepsToTake = side == RIGHT ? (location.col + 2) : (location.col - 2);
             const chip = boxElement.childNodes[0];
             const positionAfterEat = getElementFromPosition(rowToMov, stepsToTake);
-            l(`rowToMov, stepsToTake ${rowToMov} ${stepsToTake}`);
-            if(chip.dataset.team !== currentChipTeam && positionAfterEat && positionAfterEat.innerHTML == ''){
+            const positionAfterEatIsAvailable = positionAfterEat && positionAfterEat.innerHTML == '';
+            
+            if(chip.dataset.team !== currentChipTeam && positionAfterEatIsAvailable){
                 boxElement.childNodes[0].classList.add('eatable');
                 positionAfterEat.appendChild(createMiniChip(targetBoxId, currentChipTeam, chip));
             }else{
