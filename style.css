@@ -1,104 +1,122 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
+* {
+	font-family: Arial, Helvetica, sans-serif;
 }
-.container{
-    text-align: center;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
+.container {
+	text-align: center;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
 }
-.board{
-    margin: 0 auto;
-    width: 427px;
-    height: 400px;
+.board {
+	margin: 0 auto;
+	width: 427px;
+	height: 400px;
 }
-.box{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    float: left;
-    width: 50px;
-    height: 50px;
-    border: solid 0.1em #000;
+.box {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	float: left;
+	width: 50px;
+	height: 50px;
+	border: solid 0.1em #000;
 }
-.black{
-    background-color: #001;
+.black {
+	background-color: #001;
 }
-.red{
-    background-color: #F00;
+.red {
+	background-color: #f00;
 }
-.white{
-    background-color: #FFF;
+.white {
+	background-color: #fff;
 }
-.base-circle{
-    margin-top: 4px;
-    border-radius: 50%;
-    border: solid 1px #000;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+.base-circle {
+	margin-top: 4px;
+	border-radius: 50%;
+	border: solid 1px #000;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
 }
-.mini-circle{
-    margin-top: 20px;
-    border-radius: 50%;
-    border: solid 1px #FFF;
-    width: 10px;
-    height: 10px;
-    cursor: pointer; 
+.mini-circle {
+	margin-top: 20px;
+	border-radius: 50%;
+	border: solid 1px #fff;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
 }
-.black-chip{
-    background-color:rgb(59, 58, 58);
+.black-chip {
+	background-color: rgb(59, 58, 58);
 }
-.red-chip{
-    background-color: #F00;
+.red-chip {
+	background-color: #f00;
 }
-.preview-chip{
-    border: solid 1px #FFF;
-    background-color: rgb(8, 211, 25);
-}  
-.score-container{
-    border: solid 1px #000;
-    padding: 5px;
-    width: 100px;
-    height: 100px;
-    font-size: 14px;
+.preview-chip {
+	border: solid 1px #fff;
+	background-color: rgb(8, 211, 25);
 }
-.score-container span{
-    display: block;
-    font-weight: bold;
-    font-size: 15px;
-    border-bottom: solid 0.1em #000;
+.score-container {
+	border: solid 1px #000;
+	padding: 5px;
+	width: 100px;
+	height: 100px;
+	font-size: 14px;
 }
-.red-team{
-    margin-right: 10px;
+.score-container span {
+	display: block;
+	font-weight: bold;
+	font-size: 15px;
+	border-bottom: solid 0.1em #000;
 }
-.black-team{
-    margin-top: 325px;
-    margin-left: 10px;
+.red-team {
+	margin-right: 10px;
 }
-.game-area{
-    margin: 0 auto;
-    display: flex;
-    align-content: center;
-    justify-content: space-evenly;
+.black-team {
+	margin-top: 325px;
+	margin-left: 10px;
 }
-.eatable{
-    animation: blink 1s linear infinite;
+.game-area {
+	margin: 0 auto;
+	display: flex;
+	align-content: center;
+	justify-content: space-evenly;
 }
-@keyframes blink{
-    0%{opacity: 0;}
-    50%{opacity: .5;}
-    100%{opacity: 1;}
+.eatable {
+	animation: blink 1s linear infinite;
 }
-.link{
-    text-align: center;
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 1;
+	}
 }
-.link a{
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
+.link {
+	text-align: center;
 }
-.link img{
-    height: 24px;
+.link a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1rem;
+}
+.link img {
+	height: 24px;
+}
+.is-queen {
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.is-queen::after {
+	content: 'Q';
+	font-size: 29px;
+	color: #fff;
+	font-weight: bold;
 }
